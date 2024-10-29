@@ -1,0 +1,1 @@
+db.orders.aggregate( [ { $match: { size: "medium" } }, { $group: { _id: "$name", totalQuantity: { $sum: "$quantity" } } } ] )
